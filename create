@@ -1,0 +1,24 @@
+{
+    enable_servos();
+    msleep(500);
+    set_servo_position(0,422);
+    set_servo_position(1,422);
+    msleep(3000);
+    create_connect();
+    create_drive_direct(200,200);
+    msleep(2000);
+    create_drive_direct(100,-100);
+    msleep(2000);
+    create_drive_direct(200,200);
+    msleep(2500);
+    create_stop();
+    set_servo_position(0,1230);
+    set_servo_position(1,1230);
+    msleep(7000);
+    create_drive_direct(200,-200);
+    msleep(750);
+    disable_servos();
+    create_stop();
+    create_disconnect();
+}
+    
