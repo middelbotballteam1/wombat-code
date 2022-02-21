@@ -1,0 +1,44 @@
+{
+    printf("yeet\n");
+    motor(0,95);    //forward
+    motor(3,95);
+    msleep(4500);   
+    motor(0,95);
+    motor(3,-95);  // 90 degrees to the left
+    msleep(650); 
+    ao();
+   enable_servos();
+    set_servo_position(3,1100);   //  adjust servo 
+    msleep(1000);   // forward
+     motor(0,100);
+    motor(3,95);
+    msleep(3400);  
+    ao();
+    msleep(2000);   // wait
+    set_servo_position(3,1800);   // lift slowly
+    msleep(1000);
+    ao();  // wait
+    set_servo_position(3,1696);
+    msleep(1000);
+    set_servo_position(3,2000);
+    msleep(1500);
+    set_servo_position(3,1130);
+    msleep(250);
+    disable_servos();
+    motor(0,-95);
+    motor(3,-95);
+    msleep(2000);
+    motor(0,100);
+    motor(3,-95);
+    msleep(700);
+    motor(0,95);
+    motor(3,95);
+    msleep(2111);
+    ao();
+    enable_servos();
+    set_servo_position(3,845);
+    msleep(1000);
+    set_servo_position(3,1564);
+    msleep(1000);
+    disable_servos();
+    return 0;
